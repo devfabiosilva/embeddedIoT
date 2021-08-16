@@ -1,9 +1,9 @@
 import serial
 from totcp import ToTcp
 from monitore import monitore
-
+#sum aug 15 22:55:41 -03 2021 
 def main():
-    """Função principal da aplicação.
+    """Main file application
     """
 
     print(serial.__file__)
