@@ -15,8 +15,11 @@ def main():
         bytesize=serial.EIGHTBITS,
         timeout=0.1
     )
+    #address='192.168.1.78'
+    address='localhost'
+    port=10000
 
-    sender=ToTcp('localhost', 10000)
+    sender=ToTcp(address, port)
 
     monitore(sender, ser)
 
