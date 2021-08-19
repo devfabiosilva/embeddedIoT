@@ -16,7 +16,7 @@ This is my fisrt and old discontinued home embedded 8bit iot for control, monito
 
 ### - Firmware specification
 
-  - Project [folder](/firmware_ver.1.5)
+  - Project [folder](/firmware_ver1.5)
   - Last update 2015-07-01
 
 ### - Uart for IoT using PySerial (Monitoring)
