@@ -1,0 +1,25 @@
+#!/bin/bash
+
+echo "Starting..."
+echo " "
+echo "Cleaning project..."
+echo " "
+X=se
+rm -f $X.o
+rm -f $X.hex
+rm -f $X
+echo "Creating project ..."
+echo " "
+#avr-gcc  -Os -mmcu=atmega328p $X.cpp -o  $X.o
+avr-gcc  -Os -v -mmcu=atmega328p $X.c -o  $X -lm
+echo "Creating executable... "
+echo " "
+#avr-gcc $X.o -o $X
+echo "Creating HEX File ..."
+echo " "
+avr-objcopy -j .text -j .data -O ihex $X $X.hex
+avr-objcopy -j .text -j .data -O binary $X $X.fw
+echo "Writing flash..."
+echo " "
+avrdude -c arduino -P /dev/ttyACM0 -b 19200 -p atmega328p -U flash:w:$X.hex
+avr-objdump -h -d -j .data -j .text $X>texto.txt

@@ -1,0 +1,15 @@
+EESchema-LIBRARY Version 2.3  Date: Qua 02 Abr 2014 10:23:15 BRT
+#encoding utf-8
+#
+# 74HC373
+#
+DEF 74HC373 U 0 40 Y Y 1 F N
+F0 "U" -50 250 60 H V C CNN
+F1 "74HC373" -50 250 60 H V C CNN
+DRAW
+S -1000 -600 950 -100 0 1 0 N
+X ~ ~ -1250 -150 300 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library
